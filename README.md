@@ -1,10 +1,10 @@
-# PrediktiveTest
-Repository to track the Tradesy Prediktive excersises by Felipe Jimenez.
+# LeanTechTest
+Repository to track the Tradesy LeanTech excersises by Felipe Jimenez.
 
-## Cypress Tradesy Excercise
+## Cypress swaglabs Excercise
 Node.js version 10 or higher and npm is required to execute this script. <br /><br />
 
-In order to install the framework, please clone the repo, enter to the `PrediktiveTest` folder, then, run via cmd the command
+In order to install the framework, please clone the repo, enter to the `LeanTechTest` folder, then, run via cmd the command
 `npm install`, this will install all required dependencies. <br /><br />
 
 After the framework is propperly installed, the tests may be executed headless using the command `npm run cy:run:headless`, 

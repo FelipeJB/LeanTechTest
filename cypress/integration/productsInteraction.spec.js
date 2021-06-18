@@ -2,15 +2,12 @@ import { genericUtils } from "../support/genericUtils";
 import { loginPageServices,
          headerPageServices,
          inventoryPageServices,
+         itemDetailsPageServices,
          shoppingCartPageServices,
          purchaseDataFormPageServices,
          purchaseConfirmationPageServices,
          purchaseThankYouPageServices 
        } from "../support/services/pageServices"
-
-Cypress.on('uncaught:exception', (err, runnable) => {
-  return false
-})
 
 context('Products Interaction Test Cases', () => {
 
@@ -25,7 +22,9 @@ context('Products Interaction Test Cases', () => {
   })
 
   it('SWAG00X: Open an item details page from inventory with standard user', () => {
-    
+    inventoryPageServices.openItem(genericUtils.getRandom(1,5));
+    itemDetailsPageServices.isSelectedItemDisplayed();
+    itemDetailsPageServices.isCorrectlyDisplayed();
   })
 
   it('SWAG00X: Purchase the lowest priced product with standard user', () => {

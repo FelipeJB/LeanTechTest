@@ -22,8 +22,25 @@ export class inventoryPageServices {
   }
 
   /*
+   * Clicks on the title on a given inventory item according to its index
+   * Stores selectedItemName Alias to record the name of selected item
+  */
+  openItem(index){
+    cy.get(inventoryPage.products.container)
+      .eq(index)
+      .find(inventoryPage.products.name)
+      .invoke('text')
+      .as('selectedItemName');
+
+    cy.get(inventoryPage.products.container)
+      .eq(index)
+      .find(inventoryPage.products.name)
+      .click(); 
+  }
+
+  /*
    * Clicks on the add to cart button on a given inventory item according to its index
-   * Stores selectedItemName Alias to record the name of favorited item
+   * Stores selectedItemName Alias to record the name of selected item
   */
   addItemToCart(index){
     cy.get(inventoryPage.products.container)

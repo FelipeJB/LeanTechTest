@@ -16,7 +16,7 @@ const purchaseConfirmationPage = {
 export class purchaseConfirmationPageServices {
 
   /*
-   * Checks if a given name is present on the shopping cart
+   * Checks if a given name is present on the purchaseConfirmation
    * Requires selectedItemName Alias to be set before using
   */
   isSelectedItemOnCart(){
