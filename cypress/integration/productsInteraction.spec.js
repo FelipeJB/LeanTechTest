@@ -21,13 +21,13 @@ context('Products Interaction Test Cases', () => {
     headerPageServices.waitForUserLogin();
   })
 
-  it('SWAG00X: Open an item details page from inventory with standard user', () => {
+  it('SWAG007: Open an item details page from inventory', () => {
     inventoryPageServices.openItem(genericUtils.getRandom(1,5));
     itemDetailsPageServices.isSelectedItemDisplayed();
     itemDetailsPageServices.isCorrectlyDisplayed();
   })
 
-  it('SWAG00X: Purchase the lowest priced product with standard user', () => {
+  it('SWAG008: Purchase the lowest priced product', () => {
     inventoryPageServices.applyFilter('lohi');
     inventoryPageServices.addItemToCart(0);
     headerPageServices.clickCartIcon();
@@ -40,7 +40,7 @@ context('Products Interaction Test Cases', () => {
     purchaseThankYouPageServices.isCorrectlyDisplayed();
   })
 
-  it('SWAG00X: Purchase the highest priced product with standard user', () => {
+  it('SWAG009: Purchase the highest priced product', () => {
     inventoryPageServices.applyFilter('hilo');
     inventoryPageServices.addItemToCart(0);
     headerPageServices.clickCartIcon();
